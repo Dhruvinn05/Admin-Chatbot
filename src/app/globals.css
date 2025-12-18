@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .admin-card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-soft border border-gray-200 dark:border-gray-700;
+  }
+  
+  .admin-button {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .admin-button-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .admin-button-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600;
+  }
+  
+  .admin-input {
+    @apply w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors;
+  }
+  
+  .sidebar-item-active {
+    @apply bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300;
+  }
+  
+  .sidebar-item-inactive {
+    @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300;
+  }
+  
+  .chat-message-bubble {
+    @apply max-w-xs lg:max-w-md px-4 py-2 rounded-2xl text-sm leading-relaxed;
+  }
+  
+  .chat-message-user {
+    @apply bg-primary-500 text-white ml-auto rounded-br-md;
+  }
+  
+  .chat-message-admin {
+    @apply bg-secondary-500 text-white mr-auto rounded-bl-md;
+  }
+  
+  .chat-message-ai {
+    @apply bg-gray-100 text-gray-800 border border-gray-200 mr-auto rounded-bl-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+}
